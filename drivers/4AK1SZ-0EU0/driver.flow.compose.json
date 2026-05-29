@@ -235,6 +235,198 @@
                 ]
             }
           ]
-      }        
+      },
+        {
+  "id": "4AK1SZ-0EU0-setKeypadMode",
+  "title": {
+    "en": "Set Keypad Mode with Value",
+    "de": "Keypad-Modus mit Wert setzen"
+  },
+  "args": [
+    {
+      "name": "mode",
+      "type": "dropdown",
+      "values": [
+        [
+  {
+    "id": "disarmed",
+    "label": {
+      "en": "Disarmed",
+      "de": "Inaktiv",
+      "nl": "Uitgeschakeld",
+      "fr": "Désarmé",
+      "it": "Disattivato",
+      "no": "Deaktivert",
+      "sv": "Avaktiverad",
+      "da": "Fravalgt / Deaktiveret",
+      "es": "Desarmado"
+    }
+  },
+  {
+    "id": "armed_stay",
+    "label": {
+      "en": "Armed Stay",
+      "de": "Zuhause und aktiv",
+      "nl": "Thuis ingeschakeld",
+      "fr": "Armé partiel",
+      "it": "Parziale attivo",
+      "no": "Devis aktivert / Hjemmemodus",
+      "sv": "Hemmaläge aktiverat",
+      "da": "Tilkoblet hjemme",
+      "es": "Armado parcial"
+    }
+  },
+  {
+    "id": "armed_away",
+    "label": {
+      "en": "Armed Away",
+      "de": "Abwesend gesichert",
+      "nl": "Inschakelen bij afwezigheid",
+      "fr": "Armé total",
+      "it": "Totale attivo",
+      "no": "Fullt aktivert / Borte",
+      "sv": "Bortatillstånd aktiverat",
+      "da": "Tilkoblet ude",
+      "es": "Armado total"
+    }
+  },
+  {
+    "id": "armed",
+    "label": {
+      "en": "Armed (General)",
+      "de": "Aktiviert (Allgemein)",
+      "nl": "Ingeschakeld (Algemeen)",
+      "fr": "Armé (Général)",
+      "it": "Attivato (Generale)",
+      "no": "Aktivert (Generell)",
+      "sv": "Aktiverad (Allmänt)",
+      "da": "Tilkoblet (Generelt)",
+      "es": "Armado (General)"
+    }
+  },
+  {
+    "id": "entry_delay",
+    "label": {
+      "en": "Entry Delay / Countdown",
+      "de": "Eingangsverzögerung (Countdown)",
+      "nl": "Inloopvertraging (Aftellen)",
+      "fr": "Délai d'entrée (Compte à rebours)",
+      "it": "Ritardo d'ingresso (Conto alla rovescia)",
+      "no": "Inngangsforsinkelse (Nedtelling)",
+      "sv": "Inpasseringsfördröjning (Nedräkning)",
+      "da": "Indgangsforsinkelse (Nedtælling)",
+      "es": "Retardo de entrada (Cuenta atrás)"
+    }
+  },
+  {
+    "id": "alarm",
+    "label": {
+      "en": "Burglar Alarm",
+      "de": "Einbruch-Alarm (Sirene)",
+      "nl": "Inbraakalarm (Sirene)",
+      "fr": "Alarme anti-intrusion (Sirène)",
+      "it": "Allarme antifurto (Sirena)",
+      "no": "Innbruddsalarm (Sirene)",
+      "sv": "Inbrottslarm (Sirén)",
+      "da": "Tyverialarm (Sirene)",
+      "es": "Alarme de intrusión (Sirena)"
+    }
+  },
+  {
+    "id": "fire_alarm",
+    "label": {
+      "en": "Fire Alarm",
+      "de": "Feuer-Alarm",
+      "nl": "Brandalarm",
+      "fr": "Alarme incendie",
+      "it": "Allarme incendio",
+      "no": "Brannalarm",
+      "sv": "Brandlarm",
+      "da": "Brandalarm",
+      "es": "Alarma de incendio"
+    }
+  },
+  {
+    "id": "gas_alarm",
+    "label": {
+      "en": "Gas Alarm",
+      "de": "Gas-Alarm",
+      "nl": "Gasalarm",
+      "fr": "Alarme gaz",
+      "it": "Allarme gas",
+      "no": "Gassalarm",
+      "sv": "Gaslarm",
+      "da": "Gasalarm",
+      "es": "Alarma de gas"
+    }
+  },
+  {
+    "id": "medical_alarm",
+    "label": {
+      "en": "Medical Emergency",
+      "de": "Medizinischer Notruf",
+      "nl": "Medisch noodgeval",
+      "fr": "Urgence médicale",
+      "it": "Emergenza medica",
+      "no": "Medisinsk nødsituasjon",
+      "sv": "Medicinskt nödläge",
+      "da": "Medicinsk nødstilfælde",
+      "es": "Emergencia médica"
+    }
+  },
+  {
+    "id": "code_not_accepted",
+    "label": {
+      "en": "Code Wrong",
+      "de": "Code falsch / Nicht akzeptiert",
+      "nl": "Code onjuist / Geweigerd",
+      "fr": "Code erroné / Refusé",
+      "it": "Codice errato / Non accettato",
+      "no": "Feil kode / Ikke akseptert",
+      "sv": "Felaktig kod / Nekad",
+      "da": "Forkert kode / Ikke accepteret",
+      "es": "Código incorrecto / Rechazado"
+    }
+  },
+  {
+    "id": "bypass_challenge",
+    "label": {
+      "en": "Bypass Sensor Challenge",
+      "de": "Sensormeldung ignorieren",
+      "nl": "Sensormelding negeren (Bypass)",
+      "fr": "Ignorer l'alerte capteur (Bypass)",
+      "it": "Ignora avviso sensore (Esclusione)",
+      "no": "Ignorer sensorvarsel (Forbikobling)",
+      "sv": "Imonitera sensorvarning (Bypass)",
+      "da": "Ignorer sensorfejl (Bypass)",
+      "es": "Ignorar aviso de sensor (Anulación)"
+    }
+  },
+  {
+    "id": "exit_delay",
+    "label": {
+      "en": "Exit Delay / Countdown",
+      "de": "Ausgangsverzögerung (Countdown)",
+      "nl": "Uitloopvertraging (Aftellen)",
+      "fr": "Délai de sortie (Compte à rebours)",
+      "it": "Ritardo d'uscita (Conto alla rovescia)",
+      "no": "Utgangsforsinkelse (Nedtelling)",
+      "sv": "Utpasseringsfördröjning (Nedräkning)",
+      "da": "Udgangsforsinkelse (Nedtælling)",
+      "es": "Retardo de salida (Cuenta atrás)"
+    }
+  }
+]
+      ]
+    },
+    {
+      "name": "custom_value",
+      "type": "number",
+      "min": 1,
+      "max": 255,
+      "placeholder": "1"
+    }
+  ]
+}
     ]
 }
