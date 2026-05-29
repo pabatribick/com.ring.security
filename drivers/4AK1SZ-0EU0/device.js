@@ -427,7 +427,35 @@ class RingDevice extends ZwaveDevice {
     let INDICATOR_CHIME = { id: CHIME_ID,property: PROPERTY_ID_VOLUME,value: VOLUME, }
     this.setIndicator(INDICATOR_CHIME);
   }
-  
+
+  async setKeypadMode(mode, customValue = null) {
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    const commands = {
+      'disarmed':          { id: 2,  property: 1, value: 1 },
+      'alarm':             { id: 12, property: 1, value: 1 },
+      'fire_alarm':        { id: 14, property: 1, value: 1 },
+      'gas_alarm':         { id: 15, property: 1, value: 1 },
+      'medical_alarm':     { id: 19, property: 1, value: 1 },
+      'code_not_accepted': { id: 9,  property: 1, value: 1 },
+      'armed_stay':        { id: 10, property: 1, value: 1 },
+      'armed_away':        { id: 11, property: 1, value: 1 },
+      'bypass_challenge':  { id: 16, property: 1, value: 1 },
+      'entry_delay':       { id: 17, property: 7, value: 15 },
+      'exit_delay':        { id: 17, property: 2, value: 15 },
+      'armed':             { id: 10, property: 1, value: 1 }
+    };
+
+    const targetCmd = commands[mode];
+
+    if (!targetCmd) return;
+
+    if ((mode === 'entry_delay' || mode === 'exit_delay') && customValue !== null) {
+      targetCmd.value = customValue;
+    }
+
+    this.setIndicator(targetCmd);
+  }
 
   async setIndicator(value) {
     this.log("Value received to send to indicator: ", value);
