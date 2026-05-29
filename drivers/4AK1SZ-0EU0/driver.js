@@ -22,7 +22,14 @@ class RingDriver extends Homey.Driver {
             .registerRunListener( async (args, state) => {
             args.device.soundChime(args.chime,args.volume);
             return Promise.resolve( true );
-            }); 
+            });
+
+        this.homey.flow.getActionCard('4AK1SZ-0EU0-setKeypadMode')
+            .registerRunListener(async (args, state) => {
+            await args.device.setKeypadMode(args.mode, args.custom_value);
+
+            return Promise.resolve(true);
+        });
 
     }
 }
